@@ -7710,7 +7710,7 @@ Copyright (c) 2014 Daniel Eden
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  top: -77px;
+  top: -80px;
 }
 .p-navbar.p-navbar-shrink,
 .p-a-navbar.p-navbar-shrink,
@@ -7944,10 +7944,64 @@ Copyright (c) 2014 Daniel Eden
   font-weight: 200;
   font-family: 'Calligraffitti', cursive;
 }
+.social-icon {
+  margin: 0 0 20px;
+}
+.social-icon-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.social-icon-list li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.social-icon-list li:last-child {
+  margin-right: 0;
+}
+.social-icon-list li a {
+  font-size: 35px;
+  color: #aaa;
+}
+.social-icon-list li a:hover {
+  text-decoration: none;
+}
+.social-icon-list li a.b:hover {
+  color: #4A89DC;
+}
+.social-icon-list li a.ob:hover {
+  color: #48CFAD;
+}
+.social-icon-list li a.r:hover {
+  color: #E9573F;
+}
+.social-icon-list li a.br:hover {
+  color: #AC92EC;
+}
 .foot {
   margin: 50px 0 20px;
 }
 .foot em {
   font-size: 30px;
+}
+.contact {
+  margin-bottom: 30px;
+}
+.w {
+  color: #fff;
+}
+.footer {
+  background: #434A54;
+}
+.footer-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-menu li {
+  margin-bottom: 10px;
+}
+.footer-menu li a {
+  color: #ddd;
 }
 /*# sourceMappingURL=/styles/main.css.map */

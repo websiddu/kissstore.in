@@ -107,10 +107,20 @@
                     <li>
                         <img src="images/slider/2.jpg" alt="">
                         <div class="container">
-                            Slide three
+                            <div class="slide-content animated bounceInDown  js_slide_cont">
+                                <h1 class="animated bounceInDown">Customized Cards</h1>
+                                <div class="">
+                                    <h2 class='nmt'>Present a card to your loved!</h2>
+                                    <img src="images/landing-kiss.png" alt="" class="preserve">
+                                </div>
+                                <div class="foot animated bounceInDown">
+                                    <em class="icon-arrow-down tada animated infinite delay"></em>
+                                    <p>Scroll down</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li>
+<!--                     <li>
                         <img src="images/slider/3.jpg" alt="">
                         <div class="container">
                             Slide three
@@ -121,7 +131,7 @@
                         <div class="container">
                             Slide one
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
                 <nav class="slides-navigation">
                     <a href="#" class="next"><i class="icon-uniE614"></i></a>
@@ -186,6 +196,7 @@
             <div class="container">
                 <h2 class='h'>What we did?</h2>
                 <div class="filters">
+                  Filter by:
                     <button class="filter btn btn-success custom-button js_custom" data-filter="all">All</button>
                     <button class="filter btn btn-success custom-button" data-filter=".kiss-custom">Custom</button>
                     <button class="filter btn btn-success custom-button" data-filter=".poster">Posters</button>
@@ -239,14 +250,41 @@
                         <div class="contact-card">
                             <img src="images/jharna.jpg" alt="">
                             <h4>Jharna Makhija</h4>
-                            <a href="https://www.facebook.com/jharna.makhija" target="_blank">jharna.makhija</a>
+                            <div class="social-icon">
+                              <ul class="social-icon-list">
+                                <li>
+                                  <a class="b" href="https://www.facebook.com/jharna.makhija" target="_blank"><em class="icon-facebook"></em></a>
+                                </li>
+                                <li>
+                                  <a class="r" href="https://www.facebook.com/jharna.makhija" target="_blank"><em class="icon-googleplus"></em></a>
+                                </li>
+                                <li>
+                                  <a class="br" href="https://www.facebook.com/jharna.makhija" target="_blank"><em class="icon-instagram"></em></a>
+                                </li>
+                              </ul>
+                            </div>
+
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact-card">
                             <img src="images/chaitra.jpg" alt="">
                             <h4>Chaitra Prasad</h4>
-                            <a href="https://www.facebook.com/chaitra.prasad.1" target="_blank">chaitra.prasad.1</a>
+
+                            <div class="social-icon">
+                              <ul class="social-icon-list">
+                                <li>
+                                  <a class="b" href="https://www.facebook.com/chaitra.prasad.1" target="_blank"><em class="icon-facebook"></em></a>
+                                </li>
+                                <li>
+                                  <a class="r" href="https://www.facebook.com/jharna.makhija" target="_blank"><em class="icon-googleplus"></em></a>
+                                </li>
+                                <li>
+                                  <a class="br" href="https://www.facebook.com/jharna.makhija" target="_blank"><em class="icon-instagram"></em></a>
+                                </li>
+                              </ul>
+                            </div>
+
                         </div>
 
                     </div>
@@ -256,10 +294,95 @@
         <section class="layer contact js_point" id='contact'>
             <div class="container">
                 <h2 class="h">Contact</h2>
+                <div class="row">
+                  <div class="col-md-4">
+                    <h3>Let's Talk</h3>
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="text" required class="form-control" placeholder="Whats your name ?">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" required class="form-control" id="eamil" placeholder="Give us your email for a reply">
+                      </div>
+                      <div class="form-group">
+                        <label for="Message">Message</label>
+                        <textarea class="form-control" id="Message" placeholder="Type your message" required></textarea>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary">Post</button>
+                    </form>
+                  </div>
+                  <div class="col-md-4">
+                    <h3>Socialize</h3>
+                    <div style="height: 300px;"></div>
+                  </div>
+                  <div class="col-md-4">
+                  <h3>Mail</h3>
+                    <address>
+                      shop@kissshop.in
+                    </address>
+                  </div>
+                </div>
             </div>
         </section>
 
-        <footer class="layer footer"></footer>
+        <footer class="layer footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h3 class='w'>Menu</h3>
+              <ul class="footer-menu">
+                <li> <a href="#home">Home</a></li>
+                                            <li>
+                                <a href="#services">Services</a>
+                            </li>
+                            <li>
+                                <a href="#testimonials">Testimonials</a>
+                            </li>
+                            <li>
+                                <a href="#works">Works</a>
+                            </li>
+                            <li>
+                                <a href="#media">In Media</a>
+                            </li>
+                            <li>
+                                <a href="#team">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+              </ul>
+            </div>
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-4">
+            <h3 class='w'>Social</h3>
+                            <div class="social-icon">
+                              <ul class="social-icon-list">
+                                                              <li>
+                                  <a class="br" href="https://www.facebook.com/jharna.makhija" target="_blank"><em class="icon-twitter"></em></a>
+                                </li>
+                                <li>
+                                  <a class="b" href="https://www.facebook.com/chaitra.prasad.1" target="_blank"><em class="icon-facebook"></em></a>
+                                </li>
+                                <li>
+                                  <a class="r" href="https://www.facebook.com/jharna.makhija" target="_blank"><em class="icon-googleplus"></em></a>
+                                </li>
+                                <li>
+                                  <a class="br" href="https://www.facebook.com/jharna.makhija" target="_blank"><em class="icon-instagram"></em></a>
+                                </li>
+                              </ul>
+                            </div>
+                            <p class='w'> All right reserved &copy;2014</p>
+            </div>
+          </div>
+          </div>
+
+        </footer>
     </section>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -292,18 +415,7 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/bootstrap.js -->
-    <script src="bower_components/bootstrap/js/affix.js"></script>
-    <script src="bower_components/bootstrap/js/alert.js"></script>
-    <script src="bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="bower_components/bootstrap/js/tooltip.js"></script>
-    <script src="bower_components/bootstrap/js/modal.js"></script>
-    <script src="bower_components/bootstrap/js/transition.js"></script>
-    <script src="bower_components/bootstrap/js/button.js"></script>
-    <script src="bower_components/bootstrap/js/popover.js"></script>
-    <script src="bower_components/bootstrap/js/carousel.js"></script>
-    <script src="bower_components/bootstrap/js/scrollspy.js"></script>
-    <script src="bower_components/bootstrap/js/collapse.js"></script>
-    <script src="bower_components/bootstrap/js/tab.js"></script>
+
     <!-- endbuild -->
 </body>
 

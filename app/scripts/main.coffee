@@ -20,7 +20,7 @@ window.Kiss = do ->
       setTimeout ->
         $("li", '.p-navbar-nav').removeClass('active')
         $(event.target).parent('li').addClass('active')
-      , 500
+      , 300
       _target = $("##{id.slice(1)}")
       $('body, html').animate
         scrollTop: _target.offset().top - 80

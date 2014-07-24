@@ -25,7 +25,7 @@
         setTimeout(function() {
           $("li", '.p-navbar-nav').removeClass('active');
           return $(event.target).parent('li').addClass('active');
-        }, 500);
+        }, 300);
         _target = $("#" + (id.slice(1)));
         return $('body, html').animate({
           scrollTop: _target.offset().top - 80

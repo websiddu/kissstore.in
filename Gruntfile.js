@@ -232,7 +232,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'data/*.json',
-            'images/works/*.{jpg,png}',
+            'images/works/{,*/}*.{jpg,png}',
             'fonts/*.{ttf, eot, svg, woff}',
             'images/media/*.{jpg,png}',
             'images/test/*.{jpg,png}',
@@ -300,7 +300,7 @@ module.exports = function (grunt) {
     'concat',
     'uglify',
     'copy',
-    'rev',
+    //'rev',
     'usemin'
   ]);
 
