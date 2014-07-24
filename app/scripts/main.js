@@ -1,15 +1,35 @@
 (function() {
   window.Kiss = (function() {
-    var _init, _initSuperSlider, _initWaypoints;
+    var _doSmoothScroll, _init, _initSuperSlider, _initWaypoints;
     _init = function() {
-      return _initSuperSlider();
+      _initSuperSlider();
+      _initWaypoints();
+      return _doSmoothScroll();
     };
     _initWaypoints = function() {
-      return $('.js_slide_cont').waypoint(function(direction) {
-        if (direction === 'down') {
-          console.log("Is this ture..");
-          return $('.js_header').addClass('animated slideInDown').removeClass('hide');
+      return $('.js_point').waypoint({
+        offset: 80,
+        handler: function(direction) {
+          var id;
+          $('li', '.p-navbar-nav').removeClass('active');
+          id = $(this).attr('id');
+          return $("a[href='#" + id + "']", '.p-navbar-nav').parent('li').addClass('active');
         }
+      });
+    };
+    _doSmoothScroll = function() {
+      return $("a", '.p-navbar-nav').on('click', function(event) {
+        var id, _target;
+        event.preventDefault();
+        id = $(this).attr('href');
+        setTimeout(function() {
+          $("li", '.p-navbar-nav').removeClass('active');
+          return $(event.target).parent('li').addClass('active');
+        }, 500);
+        _target = $("#" + (id.slice(1)));
+        return $('body, html').animate({
+          scrollTop: _target.offset().top - 80
+        });
       });
     };
     _initSuperSlider = function() {
@@ -17,7 +37,6 @@
     };
     return {
       intiQuickSand: function() {
-        console.log("After data...");
         return $('#container').mixItUp({
           animation: {
             enable: true,

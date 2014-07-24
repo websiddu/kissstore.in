@@ -2,13 +2,29 @@ window.Kiss = do ->
 
   _init = ->
     _initSuperSlider()
-    #_initWaypoints()
+    _initWaypoints()
+    _doSmoothScroll()
 
   _initWaypoints = ->
-    $('.js_slide_cont').waypoint (direction) ->
-      if direction is 'down'
-        console.log "Is this ture.."
-        $('.js_header').addClass('animated slideInDown').removeClass('hide')
+    $('.js_point').waypoint
+      offset: 80
+      handler: (direction) ->
+        $('li', '.p-navbar-nav').removeClass('active')
+        id = $(this).attr('id')
+        $("a[href='##{id}']", '.p-navbar-nav').parent('li').addClass('active')
+
+  _doSmoothScroll = ->
+    $("a", '.p-navbar-nav').on 'click', (event) ->
+      event.preventDefault()
+      id = $(this).attr('href')
+      setTimeout ->
+        $("li", '.p-navbar-nav').removeClass('active')
+        $(event.target).parent('li').addClass('active')
+      , 500
+      _target = $("##{id.slice(1)}")
+      $('body, html').animate
+        scrollTop: _target.offset().top - 80
+
 
 
   _initSuperSlider = ->
@@ -17,7 +33,6 @@ window.Kiss = do ->
 
 
   intiQuickSand: ->
-    console.log "After data..."
     $('#container').mixItUp
       animation:
         enable: true
