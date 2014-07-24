@@ -1,4 +1,8 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
+@import "superslider.less";
+@import "icons.less";
+@import "animate.less";
+@import "cnavbar.less";
 @icon-font-path: "../fonts/glyphicons/";
 
 
@@ -49,6 +53,10 @@ body {
   // background: #efefea;
 }
 
+.h {
+  color: #067fff;
+}
+
 .navbar-default {
   box-shadow: 0 2px 10px -3px #999;
   border-bottom: 0;
@@ -77,7 +85,6 @@ body {
 
 .testimonials {
   background: #efefea;
-  padding-bottom: 50px;
 }
 .works {
 
@@ -118,6 +125,7 @@ body {
 
 .testimonial {
   position: relative;
+  margin-bottom: 30px;
   .test-img {
     position: absolute;
     top: 0;
@@ -140,12 +148,102 @@ body {
       content: '';
       display: block;
       height: 50px;
-      width: 50px;
+      width: 30px;
       position: absolute;
-      left: -50px;
+      left: -30px;
       background: #fff;
       top: 0px;
       z-index: 1;
     }
   }
+}
+
+.mix {
+  display: none;
+}
+
+.work {
+  height: 200px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  img {
+    background: url('../images/overlay.png') no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.team {
+  background:  url('../images/overlay.png'), url('../images/team.jpg') no-repeat center center;
+  background-size: 256px 256px, cover;
+}
+
+.filters {
+  margin: 30px auto;
+}
+// .custom-button {
+//   background-color: #8CC152;
+//   border-color: #A0D468;
+// }
+
+.media {
+  background: #E6E9ED;
+}
+
+.contact-card {
+  text-align: center;
+  margin-bottom: 30px;
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+  }
+  h4 {
+    color: #fff;
+    font-size: 30px;
+  }
+  a {
+    font-size: 24px;
+  }
+}
+
+.mediacover-box {
+  margin-bottom: 30px;
+  img {
+    height: 130px;
+    margin-bottom: 20px;
+    &:after {
+
+    }
+  }
+}
+
+.slide-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  width: 500px;
+  margin: 80px auto;
+
+  h1 {
+    color: #43434a;
+    text-align: center;
+    text-shadow: 0 0 4px #555;
+    font-size: 60px;
+    font-family: 'Calligraffitti', cursive;
+  }
+  h2 {
+    color: #444;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Calligraffitti', cursive;
+  }
+}
+
+.foot {
+  margin: 50px 0 20px;
+  em {
+    font-size: 30px;
+  }
+
 }
