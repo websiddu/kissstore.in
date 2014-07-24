@@ -1,6 +1,7 @@
 window.Kiss = do ->
 
   _init = ->
+    $('body').jpreLoader();
     _initSuperSlider()
     _initWaypoints()
     _doSmoothScroll()

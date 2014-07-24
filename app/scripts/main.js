@@ -2,6 +2,7 @@
   window.Kiss = (function() {
     var _doSmoothScroll, _init, _initSuperSlider, _initWaypoints;
     _init = function() {
+      $('body').jpreLoader();
       _initSuperSlider();
       _initWaypoints();
       return _doSmoothScroll();
