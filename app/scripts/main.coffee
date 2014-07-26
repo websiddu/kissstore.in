@@ -8,11 +8,16 @@ window.Kiss = do ->
 
   _initWaypoints = ->
     $('.js_point').waypoint
-      offset: 80
+      offset: 50
       handler: (direction) ->
         $('li', '.p-navbar-nav').removeClass('active')
         id = $(this).attr('id')
         $("a[href='##{id}']", '.p-navbar-nav').parent('li').addClass('active')
+
+    $(document).scroll ->
+      if $(document).scrollTop() is 0
+        $('li', '.p-navbar-nav').removeClass('active')
+        $("a[href='#home']", '.p-navbar-nav').parent('li').addClass('active')
 
   _doSmoothScroll = ->
     $("a", '.p-navbar-nav').on 'click', (event) ->

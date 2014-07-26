@@ -8,13 +8,19 @@
       return _doSmoothScroll();
     };
     _initWaypoints = function() {
-      return $('.js_point').waypoint({
-        offset: 80,
+      $('.js_point').waypoint({
+        offset: 50,
         handler: function(direction) {
           var id;
           $('li', '.p-navbar-nav').removeClass('active');
           id = $(this).attr('id');
           return $("a[href='#" + id + "']", '.p-navbar-nav').parent('li').addClass('active');
+        }
+      });
+      return $(document).scroll(function() {
+        if ($(document).scrollTop() === 0) {
+          $('li', '.p-navbar-nav').removeClass('active');
+          return $("a[href='#home']", '.p-navbar-nav').parent('li').addClass('active');
         }
       });
     };

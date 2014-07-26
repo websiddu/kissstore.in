@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Greeting cards",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore pariatur maxime, nam, repellat sapiente soluta a dolorum ea!",
+    "icon": "greeting"
+
+  },
+  {
+    "name": "Customization",
+    "description": "Leave a big impression with these cool range of customised  cards! Make it extra meaningful by adding a personal touch to your greetings.There's truly a perfect card for any one and any situation at the kiss store.",
+    "icon": "custom"
+
+  },
+
+  {
+    "name": "Diaries",
+    "description": "The personal and heart felt messages tucked inside the diary, tells stories of love & friendship, that can be cherished for years to come.",
+    "icon": "diary"
+  },
+  {
+    "name": "Posters",
+    "description": "Thoughts get bigger now! This season get flashy with the unique poster collection.",
+    "icon": "poster"
+  },
+  {
+    "name": "Explosion box",
+    "description": "Celebrate in style with our Explosion box cards. Each card is designed  & handcrafted with rich textures and unheard of embellishments, making each card extra special.",
+    "icon": "box"
+
+  }
+]

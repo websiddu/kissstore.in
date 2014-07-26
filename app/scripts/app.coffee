@@ -3,10 +3,19 @@ angular.module('kissApp', [])
 
     $scope.works = []
     $scope.testimonials = []
+    $scope.services = []
 
     $scope.init = ->
       $scope.fillWorks()
       $scope.fillTestimonials()
+      $scope.fillServices()
+
+    $scope.fillServices = ->
+      $http(
+        url: 'data/services.json'
+        method: 'GET'
+      ).success (data, status) ->
+        $scope.services = data
 
     $scope.fillTestimonials = ->
       $http(
@@ -27,7 +36,4 @@ angular.module('kissApp', [])
         , 1000
 
     $scope.init()
-
-
-
   ])

@@ -41,7 +41,7 @@
 
     <section class="container-fluid">
         <header class="js_header">
-            <nav class="navbar navbar-default navbar-fixed-top p-navbar" role="navigation">
+            <nav class="navbar navbar-default navbar-fixed-top p-navbar p-navbar-shrink" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -83,14 +83,14 @@
                 </div>
             </nav>
         </header>
-        <section id="home" class="js_slide js_point">
-
+        <div id="home" class="js_point_new"></div>
+        <section class="js_slide">
             <div id="slides">
                 <ul class="slides-container">
-
                     <li>
                         <img src="images/slider/1.jpg" alt="">
                         <div class="container">
+
                             <div class="slide-content animated bounceInDown  js_slide_cont">
                                 <h1 class="animated bounceInDown">Welcome !!!</h1>
                                 <div class="">
@@ -120,54 +120,32 @@
                             </div>
                         </div>
                     </li>
-                    <!--                     <li>
-                        <img src="images/slider/3.jpg" alt="">
-                        <div class="container">
-                            Slide three
-                        </div>
-                    </li>
-                    <li>
-                        <img src="images/slider/0.jpg" alt="">
-                        <div class="container">
-                            Slide one
-                        </div>
-                    </li> -->
                 </ul>
                 <nav class="slides-navigation">
-                    <a href="#" class="next"><i class="icon-uniE614"></i></a>
+                    <a href="#" class="next"><i class="icon-arrow-right3"></i></a>
                     <a href="#" class="prev"><i class="icon-arrow-left3"></i></a>
                 </nav>
             </div>
         </section>
+
         <section class="layer about js_point" id="services">
             <div class="container">
                 <h2 class='h'>What we do?</h2>
                 <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <h4>Customization</h4>
-                        <div class="card-img custom"></div>
-                        <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
+                    <div class="col-md-4 col-sm-6" ng-repeat="service in services">
+                        <div class="services-box">
+                            <h4>{{service.name}}</h4>
+                            <div class="services-icon">
+                              <em class="icon-{{service.icon}} bg-c{{$index}}"></em>
+                            </div>
+                            <!-- <div class="card-img custom"></div> -->
+                            <p class='card-description'>{{service.description}}</p>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <h4>Explosion box cards</h4>
-                        <div class="card-img box"></div>
-                        <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <h4>Diaries</h4>
-                        <div class="card-img diaries"></div>
-                        <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <h4>Posters</h4>
-                        <div class="card-img poster"></div>
-                        <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
+                    <div class="col-md-4 col-sm-6">
+                        <div class="services-box order-now">
+                          <h1>Order now</h1>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -239,7 +217,6 @@
                     </div>
                 </div>
 
-            </div>
             </div>
         </section>
         <section class="layer team js_point" id="team">
@@ -429,7 +406,7 @@
     <script src="bower_components/mixitup/build/jquery.mixitup.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="scripts/jquery.superslider.js"></script>
-    <script src="scripts/animated.header.js"></script>
+
     <script src="scripts/jpreloader.js"></script>
     <script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
     <script src="scripts/app.js"></script>
@@ -437,8 +414,11 @@
 
     <!-- endbuild -->
 
+    <!-- <script src="scripts/animated.header.js"></script> -->
     <!-- build:js scripts/vendor/bootstrap.js -->
-
+    <script src="bower_components/bootstrap/js/transition.js"></script>
+    <script src="bower_components/bootstrap/js/collapse.js"></script>
+    <script src="bower_components/bootstrap/js/dropdown.js"></script>
     <!-- endbuild -->
 </body>
 
