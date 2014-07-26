@@ -69,12 +69,35 @@
   }
 }
 
+@bluejeans-dark: #4A89DC;
+@bluejeans-light: #5D9CEC;
+
+@aqua-dark: #3BAFDA;
+@aqua-light: #4FC1E9;
+
+@mint-dark: #37BC9B;
+@mint-light: #48CFAD;
+
+@grass-dark: #8CC152;
+@grass-light: #A0D468;
+
+@sunflower-dark: #F6BB42;
+@sunflower-light: #FFCE54;
+
+@bittersweet-dark: #E9573F;
+@bittersweet-light: #FC6E51;
+
+@grapefruit-dark: #DA4453;
+@grapefruit-light: #ED5565;
+
+@lavender-dark: #967ADC;
+@lavender-light: #AC92EC;
 
 body{
   display:none;
 }
 #jpreOverlay {
-  background-color: #43434a;
+  background: linear-gradient(#48CFAD, #37BC9B);
 }
 #jpreSlide{
   font-size:22px;
@@ -85,15 +108,13 @@ body{
   height:30%;
 }
 #jpreLoader{
-  width:300px;
-  height:25px;
-  box-shadow:0 0 7px 3px #fff;
-  -moz-box-shadow:0 0 7px 3px #fff;
-  -webkit-box-shadow:0 0 7px 3px #fff;
-  border-radius:25px;
-  -moz-border-radius:25px;
-  -webkit-border-radius:25px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  height: 25px;
+  border-radius: 10px;
 }
+
 #jpreBar {
   border-radius:25px;
   -moz-border-radius:25px;
@@ -104,15 +125,15 @@ body{
   -webkit-background-size:30px 30px;
   -o-background-size:30px 30px;
 
-  box-shadow:
-      0 5px 5px rgba(255,255,255,0.6) inset,
-      0 -5px 7px rgba(0, 0, 0, 0.4) inset;
-   -moz-box-shadow:
-      0 5px 5px rgba(255,255,255,0.6) inset,
-      0 -5px 7px rgba(0, 0, 0, 0.4) inset;
-   -webkit-box-shadow:
-      0 5px 5px rgba(255,255,255,0.6) inset,
-      0 -5px 7px rgba(0, 0, 0, 0.4) inset;
+  // box-shadow:
+  //     0 5px 5px rgba(255,255,255,0.6) inset,
+  //     0 -5px 7px rgba(0, 0, 0, 0.4) inset;
+  //  -moz-box-shadow:
+  //     0 5px 5px rgba(255,255,255,0.6) inset,
+  //     0 -5px 7px rgba(0, 0, 0, 0.4) inset;
+  //  -webkit-box-shadow:
+  //     0 5px 5px rgba(255,255,255,0.6) inset,
+  //     0 -5px 7px rgba(0, 0, 0, 0.4) inset;
 
   background-color: #48CFAD;
   background-image: -moz-linear-gradient(-45deg,
@@ -169,10 +190,10 @@ body{
 }
 #jprePercentage {
   color:#ccc;
-  font-weight:bold;
-  text-align:center;
-  text-shadow:1px 1px 1px #333;
-  top:-100%;
+  text-align: center;
+  text-shadow: 1px 1px 1px #333;
+  top: -100%;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 #jpreButton{

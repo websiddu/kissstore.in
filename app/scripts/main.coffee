@@ -5,6 +5,15 @@ window.Kiss = do ->
     _initSuperSlider()
     _initWaypoints()
     _doSmoothScroll()
+    _initOrderNow()
+
+
+  _initOrderNow = ->
+    $('.js_order_now').on 'click', ->
+      $('body, html').animate
+        scrollTop: $('.js_name_field').offset().top - 100
+      , ->
+        $('.js_name_field').focus()
 
   _initWaypoints = ->
     $('.js_point').waypoint
@@ -29,7 +38,7 @@ window.Kiss = do ->
       , 300
       _target = $("##{id.slice(1)}")
       $('body, html').animate
-        scrollTop: _target.offset().top - 80
+        scrollTop: _target.offset().top - 50
 
 
 
@@ -55,7 +64,7 @@ window.Kiss = do ->
         staggerSequence: false
         reverseOut: true
       load:
-        filter: 'all'
+        filter: '.custom'
         sort: false
 
   # ###Kiss.init

@@ -7810,7 +7810,7 @@ body {
   display: none;
 }
 #jpreOverlay {
-  background-color: #43434a;
+  background: linear-gradient(#48cfad, #37bc9b);
 }
 #jpreSlide {
   font-size: 22px;
@@ -7821,14 +7821,11 @@ body {
   height: 30%;
 }
 #jpreLoader {
-  width: 300px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
   height: 25px;
-  box-shadow: 0 0 7px 3px #fff;
-  -moz-box-shadow: 0 0 7px 3px #fff;
-  -webkit-box-shadow: 0 0 7px 3px #fff;
-  border-radius: 25px;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
+  border-radius: 10px;
 }
 #jpreBar {
   border-radius: 25px;
@@ -7838,9 +7835,6 @@ body {
   -moz-background-size: 30px 30px;
   -webkit-background-size: 30px 30px;
   -o-background-size: 30px 30px;
-  box-shadow: 0 5px 5px rgba(255, 255, 255, 0.6) inset, 0 -5px 7px rgba(0, 0, 0, 0.4) inset;
-  -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.6) inset, 0 -5px 7px rgba(0, 0, 0, 0.4) inset;
-  -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.6) inset, 0 -5px 7px rgba(0, 0, 0, 0.4) inset;
   background-color: #48CFAD;
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%);
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(25%, rgba(255, 255, 255, 0.2)), color-stop(25%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.2)), color-stop(75%, rgba(255, 255, 255, 0.2)), color-stop(75%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
@@ -7855,10 +7849,10 @@ body {
 }
 #jprePercentage {
   color: #ccc;
-  font-weight: bold;
   text-align: center;
   text-shadow: 1px 1px 1px #333;
   top: -100%;
+  font-family: Helvetica, Arial, sans-serif;
 }
 #jpreButton {
   padding: 3px 10px;
@@ -7966,7 +7960,7 @@ body {
   min-height: 300px;
 }
 .testimonials {
-  background: #CCD1D9;
+  background: #f8f8f8;
 }
 .card-img {
   height: 120px;
@@ -8051,7 +8045,7 @@ body {
 .filters {
   margin: 30px auto;
 }
-.media {
+.kmedia {
   background: #E6E9ED;
 }
 .contact-card {
@@ -8178,10 +8172,15 @@ body {
 }
 .services-box.order-now {
   background: linear-gradient(#8cc152, #8cc152);
+  text-align: center;
 }
-.services-box.order-now h1 {
+.services-box.order-now h2 {
   text-align: center;
   color: #fff;
+  font-family: 'Calligraffitti', cursive;
+}
+.services-box.order-now button {
+  margin: 40px auto 0;
 }
 .services-box h4 {
   margin: 0 0 20px;
@@ -8201,4 +8200,7 @@ body {
   color: #fff;
   display: inline-block;
   border-radius: 100%;
+}
+.order {
+  background: #efefea;
 }

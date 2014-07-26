@@ -4,42 +4,7 @@
     "name": "",
     "date": "",
     "link_url": "",
-    "category": "kiss-custom"
-  },
-  {
-    "img_src": "images/works/custom/2.2.jpg",
-    "name": "",
-    "date": "",
-    "link_url": "",
-    "category": "kiss-custom"
-  },
-  {
-    "img_src": "images/works/custom/2.3.jpg",
-    "name": "",
-    "date": "",
-    "link_url": "",
-    "category": "kiss-custom"
-  },
-  {
-    "img_src": "images/works/custom/2.4.jpg",
-    "name": "",
-    "date": "",
-    "link_url": "",
-    "category": "kiss-custom"
-  },
-  {
-    "img_src": "images/works/custom/2.5.jpg",
-    "name": "",
-    "date": "",
-    "link_url": "",
-    "category": "kiss-custom"
-  },
-  {
-    "img_src": "images/works/custom/2.6.jpg",
-    "name": "",
-    "date": "",
-    "link_url": "",
-    "category": "kiss-custom"
+    "category": "custom"
   },
   {
     "img_src": "images/works/poster/p.1.jpg",
@@ -47,7 +12,96 @@
     "date": "",
     "link_url": "",
     "category": "poster"
+  },
+  {
+    "img_src": "images/works/box/3.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "box"
+  },
+  {
+    "img_src": "images/works/greeting/3.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "greeting"
+  },
+    {
+    "img_src": "images/works/poster/p.3.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "poster"
+  },
+  {
+    "img_src": "images/works/custom/2.2.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "custom"
+  },
+  {
+    "img_src": "images/works/custom/2.3.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "custom"
+  },
+    {
+    "img_src": "images/works/poster/p.2.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "poster"
+  },
+    {
+    "img_src": "images/works/greeting/2.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "greeting"
+  },
+  {
+    "img_src": "images/works/box/1.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "box"
+  },
+  {
+    "img_src": "images/works/custom/2.4.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "custom"
+  },
+  {
+    "img_src": "images/works/custom/2.5.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "custom"
+  },
+    {
+    "img_src": "images/works/box/2.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "box"
+  },
+    {
+    "img_src": "images/works/greeting/1.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "greeting"
+  },
+  {
+    "img_src": "images/works/custom/2.6.jpg",
+    "name": "",
+    "date": "",
+    "link_url": "",
+    "category": "custom"
   }
-
-
 ]

@@ -63,14 +63,20 @@
                             <li>
                                 <a href="#services">Services</a>
                             </li>
-                            <li>
-                                <a href="#testimonials">Testimonials</a>
-                            </li>
+
                             <li>
                                 <a href="#works">Works</a>
                             </li>
                             <li>
+                                <a href="#order">Order Now</a>
+                            </li>
+
+
+                            <li>
                                 <a href="#media">In Media</a>
+                            </li>
+                            <li>
+                                <a href="#testimonials">Testimonials</a>
                             </li>
                             <li>
                                 <a href="#team">Our Team</a>
@@ -83,7 +89,7 @@
                 </div>
             </nav>
         </header>
-        <div id="home" class="js_point_new"></div>
+        <div id="home" class="js_point"></div>
         <section class="js_slide">
             <div id="slides">
                 <ul class="slides-container">
@@ -136,7 +142,7 @@
                         <div class="services-box">
                             <h4>{{service.name}}</h4>
                             <div class="services-icon">
-                              <em class="icon-{{service.icon}} bg-c{{$index}}"></em>
+                                <em class="icon-{{service.icon}} bg-c{{$index}}"></em>
                             </div>
                             <!-- <div class="card-img custom"></div> -->
                             <p class='card-description'>{{service.description}}</p>
@@ -144,40 +150,26 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="services-box order-now">
-                          <h1>Order now</h1>
+                            <h2>Do you want these?</h2>
+
+                            <button class="btn btn-lg btn-primary js_order_now"> Order now </button>
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="layer testimonials js_point" id="testimonials">
-            <div class="container">
-                <h2 class='h'>What people said?</h2>
-                <br>
-                <div class="row">
-                    <div class="col-md-6" ng-repeat="testimonial in testimonials">
-                        <div class="testimonial">
-                            <img ng-src="{{testimonial.avatar}}" alt="" class="test-img">
-                            <div class="test-content">
-                                <div class="test-desc">
-                                    <h4 class='nmt'>{{testimonial.name}}</h4>
-                                    <p>{{testimonial.content}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
             </div>
         </section>
         <section class="layer works js_point" id="works">
             <div class="container">
                 <h2 class='h'>What we did?</h2>
+                <p>We'd love to show you our work.We're very proud of it.</p>
                 <div class="filters">
                     Filter by:
-                    <button class="filter btn btn-success custom-button js_custom" data-filter="all">All</button>
-                    <button class="filter btn btn-success custom-button" data-filter=".kiss-custom">Custom</button>
+                    <!-- <button class="filter btn btn-success custom-button js_custom" data-filter="all">All</button> -->
+                    <button class="filter btn btn-success custom-button" data-filter=".custom">Custom</button>
+                    <button class="filter btn btn-success custom-button" data-filter=".greeting">Greetings</button>
                     <button class="filter btn btn-success custom-button" data-filter=".poster">Posters</button>
+                    <button class="filter btn btn-success custom-button" data-filter=".box">Explosion box</button>
                 </div>
                 <div class="row">
                     <div id="container">
@@ -188,7 +180,44 @@
                 </div>
             </div>
         </section>
-        <section class="layer media js_point" id="media">
+        <section class="layer order js_point" id="order">
+            <div class="container">
+                <h2 class="h">Place your order</h2>
+                <div class="row">
+                <form role="form">
+                  <div class="col-md-4">
+
+                      <div class="form-group">
+                          <label for="name">Name</label>
+                          <input type="text" id="name" required class="form-control js_name_field" placeholder="Whats your name ?">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" required class="form-control" id="eamil" placeholder="Give us your email for a reply">
+                      </div>
+                      <div class="form-group">
+                          <label for="mobile">Mobile</label>
+                          <input required class="form-control" id="mobile" placeholder="Your contact number">
+                      </div>
+
+                  </div>
+                  <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="Message">Message</label>
+                                <textarea rows="8" class="form-control" id="Message" placeholder="Tell us what you want ?" required></textarea>
+                            </div>
+                  </div>
+                  <div class="col-md-2">
+
+                      <button style="margin-top: 160px;" type="submit" class="btn btn-success btn-lg">Order</button>
+                  </div>
+                  </form>
+                </div>
+            </div>
+            <br><br>
+        </section>
+        <section class="layer kmedia js_point" id="media">
             <div class="container">
                 <h2 class="h">Media &amp; Press</h2>
                 <div class="row">
@@ -219,6 +248,28 @@
 
             </div>
         </section>
+
+        <section class="layer testimonials js_point" id="testimonials">
+            <div class="container">
+                <h2 class='h'>What people said?</h2>
+                <br>
+                <div class="row">
+                    <div class="col-md-6" ng-repeat="testimonial in testimonials">
+                        <div class="testimonial">
+                            <img ng-src="{{testimonial.avatar}}" alt="" class="test-img">
+                            <div class="test-content">
+                                <div class="test-desc">
+                                    <h4 class='nmt'>{{testimonial.name}}</h4>
+                                    <p>{{testimonial.content}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </section>
+
         <section class="layer team js_point" id="team">
             <div class="container">
                 <h2 class="h">Our Team</h2>
@@ -318,25 +369,36 @@
             </div>
         </section>
 
-        <footer class="layer footer">
+        <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <h3 class='w'>Menu</h3>
+                        <div class="row">
+                          <div class="col-md-6">
                         <ul class="footer-menu">
-                            <li> <a href="#home">Home</a>
+                            <li>
+                              <a href="#home">Home</a>
                             </li>
                             <li>
                                 <a href="#services">Services</a>
                             </li>
                             <li>
-                                <a href="#testimonials">Testimonials</a>
-                            </li>
-                            <li>
                                 <a href="#works">Works</a>
                             </li>
                             <li>
+                                <a href="#order">Order Now</a>
+                            </li>
+                        </ul>
+                          </div>
+                        <div class="col-md-6">
+                          <ul class="footer-menu">
+
+                            <li>
                                 <a href="#media">In Media</a>
+                            </li>
+                            <li>
+                                <a href="#testimonials">Testimonials</a>
                             </li>
                             <li>
                                 <a href="#team">Our Team</a>
@@ -345,8 +407,12 @@
                                 <a href="#contact">Contact</a>
                             </li>
                         </ul>
+                        </div>
+
+                        </div>
+
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-2">
 
                     </div>
                     <div class="col-md-4">
@@ -379,7 +445,8 @@
                     </div>
                 </div>
             </div>
-
+            <br>
+            <br>
         </footer>
     </section>
 

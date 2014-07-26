@@ -1,11 +1,21 @@
 (function() {
   window.Kiss = (function() {
-    var _doSmoothScroll, _init, _initSuperSlider, _initWaypoints;
+    var _doSmoothScroll, _init, _initOrderNow, _initSuperSlider, _initWaypoints;
     _init = function() {
       $('body').jpreLoader();
       _initSuperSlider();
       _initWaypoints();
-      return _doSmoothScroll();
+      _doSmoothScroll();
+      return _initOrderNow();
+    };
+    _initOrderNow = function() {
+      return $('.js_order_now').on('click', function() {
+        return $('body, html').animate({
+          scrollTop: $('.js_name_field').offset().top - 100
+        }, function() {
+          return $('.js_name_field').focus();
+        });
+      });
     };
     _initWaypoints = function() {
       $('.js_point').waypoint({
@@ -35,7 +45,7 @@
         }, 300);
         _target = $("#" + (id.slice(1)));
         return $('body, html').animate({
-          scrollTop: _target.offset().top - 80
+          scrollTop: _target.offset().top - 50
         });
       });
     };
@@ -61,7 +71,7 @@
             reverseOut: true
           },
           load: {
-            filter: 'all',
+            filter: '.custom',
             sort: false
           }
         });
