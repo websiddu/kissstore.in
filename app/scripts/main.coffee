@@ -7,6 +7,7 @@ window.Kiss = do ->
     _doSmoothScroll()
     _initOrderNow()
 
+  _initWaypoints
 
   _initOrderNow = ->
     $('.js_order_now').on 'click', ->
@@ -14,6 +15,25 @@ window.Kiss = do ->
         scrollTop: $('.js_name_field').offset().top - 100
       , ->
         $('.js_name_field').focus()
+
+
+  _doSmoothScroll = ->
+    $("a", '.p-navbar-nav').on 'click', (event) ->
+      event.preventDefault()
+      id = $(this).attr('href')
+      setTimeout ->
+        $("li", '.p-navbar-nav').removeClass('active')
+        $(event.target).parent('li').addClass('active')
+      , 500
+      _target = $("##{id.slice(1)}")
+      $('body, html').animate
+        scrollTop: _target.offset().top - 50
+
+
+
+  _initSuperSlider = ->
+    $('#slides').superslides()
+    # intiQuickSand()
 
   _initWaypoints = ->
     $('.js_point').waypoint
@@ -28,24 +48,7 @@ window.Kiss = do ->
         $('li', '.p-navbar-nav').removeClass('active')
         $("a[href='#home']", '.p-navbar-nav').parent('li').addClass('active')
 
-  _doSmoothScroll = ->
-    $("a", '.p-navbar-nav').on 'click', (event) ->
-      event.preventDefault()
-      id = $(this).attr('href')
-      setTimeout ->
-        $("li", '.p-navbar-nav').removeClass('active')
-        $(event.target).parent('li').addClass('active')
-      , 300
-      _target = $("##{id.slice(1)}")
-      $('body, html').animate
-        scrollTop: _target.offset().top - 50
-
-
-
-  _initSuperSlider = ->
-    $('#slides').superslides()
-    # intiQuickSand()
-
+  initWaypoints: _initWaypoints
 
   intiQuickSand: ->
     $('#container').mixItUp
@@ -66,6 +69,9 @@ window.Kiss = do ->
       load:
         filter: '.custom'
         sort: false
+      callbacks:
+        onMixEnd: ->
+          Kiss.initWaypoints()
 
   # ###Kiss.init
   # This function is called after the dom is ready to and **$** is available

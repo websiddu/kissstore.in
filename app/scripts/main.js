@@ -8,6 +8,7 @@
       _doSmoothScroll();
       return _initOrderNow();
     };
+    _initWaypoints;
     _initOrderNow = function() {
       return $('.js_order_now').on('click', function() {
         return $('body, html').animate({
@@ -16,6 +17,24 @@
           return $('.js_name_field').focus();
         });
       });
+    };
+    _doSmoothScroll = function() {
+      return $("a", '.p-navbar-nav').on('click', function(event) {
+        var id, _target;
+        event.preventDefault();
+        id = $(this).attr('href');
+        setTimeout(function() {
+          $("li", '.p-navbar-nav').removeClass('active');
+          return $(event.target).parent('li').addClass('active');
+        }, 500);
+        _target = $("#" + (id.slice(1)));
+        return $('body, html').animate({
+          scrollTop: _target.offset().top - 50
+        });
+      });
+    };
+    _initSuperSlider = function() {
+      return $('#slides').superslides();
     };
     _initWaypoints = function() {
       $('.js_point').waypoint({
@@ -34,25 +53,8 @@
         }
       });
     };
-    _doSmoothScroll = function() {
-      return $("a", '.p-navbar-nav').on('click', function(event) {
-        var id, _target;
-        event.preventDefault();
-        id = $(this).attr('href');
-        setTimeout(function() {
-          $("li", '.p-navbar-nav').removeClass('active');
-          return $(event.target).parent('li').addClass('active');
-        }, 300);
-        _target = $("#" + (id.slice(1)));
-        return $('body, html').animate({
-          scrollTop: _target.offset().top - 50
-        });
-      });
-    };
-    _initSuperSlider = function() {
-      return $('#slides').superslides();
-    };
     return {
+      initWaypoints: _initWaypoints,
       intiQuickSand: function() {
         return $('#container').mixItUp({
           animation: {
@@ -73,6 +75,11 @@
           load: {
             filter: '.custom',
             sort: false
+          },
+          callbacks: {
+            onMixEnd: function() {
+              return Kiss.initWaypoints();
+            }
           }
         });
       },
